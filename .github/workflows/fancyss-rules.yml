@@ -35,6 +35,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add fancyss_rules/.
           git commit -m "Actions Auto Update at $(date +'%Y-%m-%d %H:%M:%S')"
+          git pull origin master --rebase
           git push
 
       - name: Delete old workflow runs
